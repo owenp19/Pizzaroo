@@ -1,6 +1,6 @@
 ![Pizzaroo](/imgs/Pizzaroo-logo.png)
 
-# Pizzaroo - Sitio Web de Pedidos de Pizza
+# Pizzaroo - Sitio Web de Pedidos de Pizzas
 
 ![Portada Pizzaroo](/imgs/portada.png)
 
