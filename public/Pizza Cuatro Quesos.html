@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Cuatro Quesos</title>
+
+    <!--Estilo css-->
+    <link rel="stylesheet" href="/css/detalles.css">
+
+    <!--Boxicons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--Remixicon-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&family=Righteous&display=swap" rel="stylesheet">
+
+    <!-- Favicon-->
+    <link rel="icon" href="/imgs/favicon.png">
+</head>
+<body>
+
+    <!-- precarga -->
+    <div id="precarga"></div>
+
+    <!--Diseño barra de navegación-->
+    <header>
+        <a href="pizzaroo.html" class="logo"><img src="/imgs/Pizzaroo.svg">Pizzaroo</a>
+
+        <ul class="barra-nav">
+            <li><a href="pizzaroo.html">Inicio</a></li>
+            <li><a href="#">Menú</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <a href="#" id="carrito-icono">
+            <i class='bx bx-cart-add' ></i>
+            <span id="carrito-numero">0</span>
+        </a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <!-- Detalles Pizza Cuatro Quesos-->
+    <section class="detalles">
+        <div class="pequeño-contenedor unico-producto">
+            <div class="fila">
+                <div class="col-2">
+                    <img src="/imgs/Pizza-de-Pepperoni.png" width="100%" id="productoImg">
+                    <div class="pequeño-img-fila">
+                        <div class="pequeño-img-col">
+                            <img src="/imgs/Pizza-de-Pepperoni.png" width="100%" class="pequeña-img">
+                        </div>
+                        <div class="pequeño-img-col">
+                            <img src="/imgs/Pizza-de-Pepperoni-1.png" width="100%" class="pequeña-img">
+                        </div>
+                        <div class="pequeño-img-col">
+                            <img src="/imgs/Pizza-de-Pepperoni-2.png" width="100%" class="pequeña-img">
+                        </div>
+                        <div class="pequeño-img-col">
+                            <img src="/imgs/Pizza-de-Pepperoni-3.png" width="100%" class="pequeña-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- contenido texto-->
+                <div class="col-2">
+                    <h1>Pizza Cuatro Quesos</h1>
+                    <h4 id="precio-producto">$30,800</h4>
+                    <select id="opciones-adicionales">
+                        <option value="0">Opciones Adicionales</option>
+                        <option value="7000">Miel de trufa + $7,000</option>
+                        <option value="9000">Nueces caramelizadas + $9,000</option>
+                        <option value="12000">Aceite de albahaca fresca + $12,000</option>
+                    </select>
+                    <input type="number" id="cantidad-producto" value="1" min="1">
+                    <button id="añadir-carrito" class="boton">Añadir al carrito</button>
+                    <h3>Detalles del producto<i class='bx bxs-pizza'></i></h3>
+                    <br>
+                    <p>Disfruta de una experiencia rica y cremosa con nuestra mezcla exclusiva de mozzarella, gorgonzola, parmesano y queso de cabra, todo en una base de masa fina y crujiente, ideal para los amantes del queso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- script precarga js -->
+    <script>
+        var loader = document.getElementById("precarga");
+
+        window.addEventListener("load", function() {
+            setTimeout(function(){
+                loader.style.display = "none";
+            }, 1500);
+        });
+    </script>
+
+    <!-- script imagenes js -->
+    <script>
+        var productoImg = document.getElementById("productoImg");
+        var pequeñaImg = document.getElementsByClassName("pequeña-img");
+
+        pequeñaImg[0].onclick = function()
+        {
+            productoImg.src = pequeñaImg[0].src;
+        }
+        pequeñaImg[1].onclick = function()
+        {
+            productoImg.src = pequeñaImg[1].src;
+        }
+        pequeñaImg[2].onclick = function()
+        {
+            productoImg.src = pequeñaImg[2].src;
+        }
+        pequeñaImg[3].onclick = function()
+        {
+            productoImg.src = pequeñaImg[3].src;
+        }
+    </script>
+</body>
+</html>

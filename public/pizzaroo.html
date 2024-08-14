@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaroo Web App</title>
+
+    <!--Estilo css-->
+    <link rel="stylesheet" href="/css/pizzaroo.css">
+
+    <!--Boxicons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--Remixicon-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&family=Righteous&display=swap" rel="stylesheet">
+
+    <!-- Favicon-->
+    <link rel="icon" href="/imgs/favicon.png">
+</head>
+<body>
+
+    <!-- precarga -->
+    <div id="precarga"></div>
+
+    <!--Diseño barra de navegación-->
+    <header>
+        <a href="#" class="logo"><img src="/imgs/Pizzaroo.svg">Pizzaroo</a>
+
+        <ul class="barra-nav">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#">Menú</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <div class="iconos-usuario">
+            <a href="#" id="carrito-icono">
+                <i class='bx bx-cart-add'></i>
+                <span id="carrito-numero">0</span>
+            </a>
+    
+            <div class="menu-sesion" id="menu-sesion">
+                <i class='bx bx-user' id="icono-usuario"></i>
+                <ul class="desplegable" id="menu-desplegable">
+                    <li><a href="#">Iniciar Sesión</a></li>
+                    <li><a href="#">Registrarse</a></li>
+                    <li><a href="#">Administradores</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <!--Diseño de sección de inicio-->
+    <section class="inicio" id="inicio">
+        <div class="inicio-texto">
+            <span>Pizzaroo Express</span>
+            <h1>Experiencia Pizzera <br> Auténtica</h1>
+            <p>En Pizzaroo Express, nos dedicamos a crear pizzas que combinan ingredientes frescos y un proceso artesanal para ofrecerte un sabor genuino y delicioso.</p>
+            <a href="#" class="btn" >¡Ordena Hoy! 🍕</a>
+        </div>
+           
+        <!-- Imagen de portada -->
+        <div class="inicio-img">
+            <img src="/imgs/principal.png" class="flotar">
+        </div>
+
+        <!-- Contadores Circulares -->
+        <div class="contadores">
+            <div class="contador">
+                <div class="numero" id="pedidos">0</div>
+                <p>Pedidos</p>
+            </div>
+            <div class="contador">
+                <div class="numero" id="ordenados">0</div>
+                <p>Entregados</p>
+            </div>
+            <div class="contador">
+                <div class="numero" id="clientes">0</div>
+                <p>Clientes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botones flotantes -->
+    <div class="botones-flotantes">
+
+        <!-- Botón de Pedidos -->
+        <div class="boton-pedidos">
+            <i class="ri-pie-chart-line"></i>
+            <span class="cantidad-pedidos">1</span> pedidos en tiempo real 
+        </div>
+    
+        <!-- Botón de WhatsApp -->
+        <a href="https://wa.me/xxxxxxxxxx" class="boton boton-whatsapp">
+            <i class="ri-whatsapp-line"></i>
+        </a>
+    
+        <!-- Botón del Juego de Pizzas -->
+        <a href="videojuego.html" class="boton boton-juego-pizzas">
+            <i class="ri-gamepad-line"></i>
+        </a>
+    
+        <!-- Botón de Reservas de Sillas -->
+        <a href="reserva.html" class="boton boton-reserva-sillas">
+            <i class="ri-bookmark-3-line"></i>
+        </a>
+    </div>      
+
+    <!--Diseño de sección de ofertas-->
+    <section class="ofertas" id="ofertas">
+        <h1>¡Aprovecha Hoy Nuestras Ofertas Pizzaroo!</h1>
+        <div class="ofertas-contenedor">
+            <div class="ofertas-cj">
+                <div class="cj-img">
+                    <img src="/imgs/oferta-1.png">
+                </div>
+                <h3>Margarita Fresca</h3>
+                <h2>$23,000 <span class="descuento">30% OFF</span></h2>
+            </div>
+    
+            <div class="ofertas-cj">
+                <div class="cj-img">
+                    <img src="/imgs/oferta-2.png">
+                </div>
+                <h3>Pepperoni Artesanal</h3>
+                <h2>$25,800 <span class="descuento">20% OFF</span></h2>
+            </div>
+    
+            <div class="ofertas-cj">
+                <div class="cj-img">
+                    <img src="/imgs/oferta-3.png">
+                </div>
+                <h3>Carnívora Salvaje</h3>
+                <h2>$30,200 <span class="descuento">15% OFF</span></h2>
+            </div>
+    
+            <div class="ofertas-cj">
+                <div class="cj-img">
+                    <img src="/imgs/oferta-4.png">
+                </div>
+                <h3>Mexicana Picante</h3>
+                <h2>$29,500 <span class="descuento">30% OFF</span></h2>
+            </div>
+        </div>
+    </section>    
+
+    <!--Diseño de sección de tienda-->
+    <section class="tienda" id="tienda">
+        <div class="encabezado">
+            <h2>Pizzas Irresistibles a Solo un Clic</h2>
+            <p>Descubre el placer en cada bocado con Pizzeroo donde la pizza excepcional se disfruta y se entrega rapido estes donde estes.</p>
+        </div>
+    
+        <!--Carta pizza 1-->
+        <div class="tienda-contenedor">
+            <div class="cj-tienda">
+                <div class="rating-contenedor">
+                    <i class="ri-star-fill"></i>
+                    <span class="rating-texto">4.5</span>
+                </div>
+                <div class="corazon-icono">
+                    <i class='bx bxs-heart'></i>
+                </div>
+                <div class="tienda-img">
+                    <img src="/imgs/Pizza-de-Pepperoni.png">
+                </div>
+                <h3>Pizza de Pepperoni</h3>
+                <div class="precio-detalles">
+                    <h2>$28,400</h2>
+                    <a href="Pizza de Pepperoni.html" class="ver-detalles">Ver más detalles</a>
+                </div>
+                <button class="add-to-cart" nombre-datos="Pizza de Pepperoni" precio-datos="28400">
+                    <i class="bx bxs-cart-add"></i>
+                </button>
+            </div>
+    
+            <!--Carta pizza 2-->
+            <div class="cj-tienda">
+                <div class="rating-contenedor">
+                    <i class="ri-star-fill"></i>
+                    <span class="rating-texto">4.5</span>
+                </div>
+                <div class="corazon-icono">
+                    <i class='bx bxs-heart'></i>
+                </div>
+                <div class="tienda-img">
+                    <img src="/imgs/pizza2.jpg" alt="">
+                </div>
+                <h3>Pizza de Pollo BBQ</h3>
+                <div class="precio-detalles">
+                    <h2>$29,800</h2>
+                    <a href="#" class="ver-detalles">Ver más detalles</a>
+                </div>
+                <button class="add-to-cart" nombre-datos="Pizza de Pollo BBQ" precio-datos="29800">
+                    <i class="bx bxs-cart-add"></i>
+                </button>
+            </div>
+    
+            <!--Carta pizza 3-->
+            <div class="cj-tienda">
+                <div class="rating-contenedor">
+                    <i class="ri-star-fill"></i>
+                    <span class="rating-texto">4.5</span>
+                </div>
+                <div class="corazon-icono">
+                    <i class='bx bxs-heart'></i>
+                </div>
+                <div class="tienda-img">
+                    <img src="/imgs/pizza3.jpg" alt="">
+                </div>
+                <h3>Pizza de Prosciutto</h3>
+                <div class="precio-detalles">
+                    <h2>$36,500</h2>
+                    <a href="#" class="ver-detalles">Ver más detalles</a>
+                </div>
+                <button class="add-to-cart" nombre-datos="Pizza de Prosciutto" precio-datos="36500">
+                    <i class="bx bxs-cart-add"></i>
+                </button>
+            </div>
+    
+            <!--Carta pizza 4-->
+            <div class="cj-tienda">
+                <div class="rating-contenedor">
+                    <i class="ri-star-fill"></i>
+                    <span class="rating-texto">4.5</span>
+                </div>
+                <div class="corazon-icono">
+                    <i class='bx bxs-heart'></i>
+                </div>
+                <div class="tienda-img">
+                    <img src="/imgs/pizza4.jpg" alt="">
+                </div>
+                <h3>Pizza Campestre Vegetariana</h3>
+                <div class="precio-detalles">
+                    <h2>$29,200</h2>
+                    <a href="#" class="ver-detalles">Ver más detalles</a>
+                </div>
+                <button class="add-to-cart" nombre-datos="Pizza Campestre Vegetariana" precio-datos="29200">
+                    <i class="bx bxs-cart-add"></i>
+                </button>
+            </div>
+    
+            <!--Carta pizza 5-->
+            <div class="cj-tienda">
+                <div class="rating-contenedor">
+                    <i class="ri-star-fill"></i>
+                    <span class="rating-texto">4.5</span>
+                </div>
+                <div class="corazon-icono">
+                    <i class='bx bxs-heart'></i>
+                </div>
+                <div class="tienda-img">
+                    <img src="/imgs/pizza5.jpg" alt="">
+                </div>
+                <h3>Pizza Hawaiana Dulce</h3>
+                <div class="precio-detalles">
+                    <h2>$27,500</h2>
+                    <a href="#" class="ver-detalles">Ver más detalles</a>
+                </div>
+                <button class="add-to-cart" nombre-datos="Pizza Hawaiana Dulce" precio-datos="27500">
+                    <i class="bx bxs-cart-add"></i>
+                </button>
+            </div>
+    
+            <!--Carta pizza 6-->
+            <div class="cj-tienda">
+                <div class="rating-contenedor">
+                    <i class="ri-star-fill"></i>
+                    <span class="rating-texto">4.5</span>
+                </div>
+                <div class="corazon-icono">
+                    <i class='bx bxs-heart'></i>
+                </div>
+                <div class="tienda-img">
+                    <img src="/imgs/pizza6.jpg" alt="">
+                </div>
+                <h3>Pizza Cuatro Quesos</h3>
+                <div class="precio-detalles">
+                    <h2>$30,800</h2>
+                    <a href="Pizza Cuatro Quesos.html" class="ver-detalles">Ver más detalles</a>
+                </div>
+                <button class="add-to-cart" nombre-datos="Pizza Cuatro Quesos" precio-datos="30800">
+                    <i class="bx bxs-cart-add"></i>
+                </button>
+            </div>
+        </div>
+    </section>  
+    
+    <!--Diseño de sección de nosotros-->
+    <section class="nosotros-pizzaroo">
+        <div class="contenedor-nosotros">
+            <div class="imagen-nosotros">
+                <img src="/imgs/pizzaroo-historia.png" class="img-nosotros">
+                <div class="info-visitanos">
+                    <p class="titulo-visitanos">Ordena tu pizza ahora</p>
+                    <p class="info-visitanos-detalle"><i class="ri-phone-line icono-visitanos"></i> (+57) 3016048654</p>
+                    <p class="info-visitanos-detalle"><i class="ri-mail-line icono-visitanos"></i> pizzaroo@restaurant.com</p>
+                    <p class="info-visitanos-detalle"><i class="ri-map-pin-line icono-visitanos"></i> Cra. 18 13 - 20, Sabanalarga Atlántico</p>
+                </div>
+            </div>
+            <div class="texto-nosotros">
+                <h2 class="titulo-nosotros">Pizzas frescas, entrega rápida</h2>
+
+                <p class="descripcion-nosotros">Explora la auténtica experiencia italiana en cada pizza con Pizzaroo. Nuestros chefs expertos elaboran cada pieza con ingredientes frescos y sabores auténticos. Con entregas rápidas y confiables, transformamos cada comida en una experiencia culinaria directamente en tu hogar. Deja que Pizzaroo traiga la pasión por la pizza hasta tu puerta.</p>
+                <a href="nosotros.html" class="boton-nosotros">Más sobre nosotros<i class="ri-arrow-right-double-line"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!--Diseño de sección de testimonios-->
+    <section class="clientes" id="testimonios">
+        <div class="encabezado">
+            <h2>Experiencias, Sabor y Elogios</h2>
+            <p>"Descubre lo que dicen nuestros clientes, experiencias positivas que hablan por sí mismas"</p>
+        </div> 
+
+        <div class="clientes-contenedor">
+            <div class="caja">
+                <img src="/imgs/cliente-1.png">
+                <div class="estrellas">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half" ></i>
+                </div>
+                <p>Las pizzas de Pizzaroo son simplemente deliciosas. ¡Cada bocado es una explosión de sabor!</p>
+                <h2>Laura M.</h2>
+            </div>
+
+            <div class="caja">
+                <img src="/imgs/cliente-2.png">
+                <div class="estrellas">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half" ></i>
+                </div>
+                <p>Increíble variedad de pizzas y un servicio al cliente excepcional. ¡Siempre mi primera opción!</p>
+                <h2>María G.</h2>
+            </div>
+
+            <div class="caja">
+                <img src="/imgs/cliente-3.png">
+                <div class="estrellas">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half" ></i>
+                </div>
+                <p>Nunca he probado pizzas tan frescas y bien elaboradas como las de Pizzaroo. ¡Altamente recomendado!</p>
+                <h2>Carlos R.</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-pizzaroo">
+        <h2>Nuestro Blog y Artículos</h2>
+        <div class="contenedor-articulos">
+          <!-- Artículo Grande -->
+          <div class="articulo-grande">
+            <img src="/imgs/articulo-6.png">
+            <div class="contenido">
+              <h3>Todo lo que Necesitas Saber Sobre los Quesos para Pizza 🧀</h3>
+              <p>Fecha: 3 de enero, 2023</p>
+              <p>Desde mozzarella hasta gorgonzola, explora los diferentes tipos de quesos que pueden transformar tu pizza. Aprende sobre sus características, cómo se derriten para lograr la pizza perfecta.</p>
+              <a href="#" class="boton-leer-articulo">Leer artículo<i class="ri-arrow-right-double-line"></i></a>
+            </div>
+          </div>
+
+          <!-- Artículos Cuadrados -->
+          <div class="articulos-cuadrados">
+            <div class="articulo-cuadrado">
+              <img src="/imgs/articulo-2.png">
+              <div class="contenido">
+                <h3>Cómo Elegir los Mejores Ingredientes para Tu Pizza 🛒</h3>
+                <p>Fecha: 3 de enero, 2023</p>
+              </div>
+            </div>
+            
+            <div class="articulo-cuadrado">
+              <img src="/imgs/articulo-3.png">
+              <div class="contenido">
+                <h3>Los 3 Errores Comunes al Hacer Pizza y Cómo Evitarlos ⚠️</h3>
+                <p>Fecha: 17 de Febrero, 2023</p>
+              </div>
+            </div>
+
+            <div class="articulo-cuadrado">
+              <img src="/imgs/articulo-4.png">
+              <div class="contenido">
+                <h3>Los Mejores Toppings para una Pizza Gourmet en Casa 🥓🍄</h3>
+                <p>Fecha: 7 de Marzo, 2023</p>
+              </div>
+            </div>
+
+            <div class="articulo-cuadrado">
+              <img src="/imgs/articulo-5.png">
+              <div class="contenido">
+                <h3>¿Qué Harías si Tuvieras Solo 5 Ingredientes para una Pizza? 🧩</h3>
+                <p>Fecha: 25 de Marzo, 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+      
+    <!--Diseño de sección de delivering-->
+    <section class="servicio-delivering">
+        <div class="contenedor-delivering">
+            <div class="imagenes-delivering">
+                <div class="imagen-delivering">
+                    <img src="/imgs/delivering.jpg">
+                </div>
+            </div>
+            <div class="texto-delivering">
+                <h2 class="titulo-delivering">Pizza Deliciosa, Entregadas en tu puerta</h2>
+                <p class="descripcion-delivering">¡Disfruta de nuestras deliciosas pizzas sin moverte de casa! Con nuestro servicio de delivery, llevamos la frescura y sabor de Pizzaroo directamente a tu puerta. ¡Haz tu pedido hoy y vive una experiencia gastronómica sin igual!</p>
+                <ul class="lista-servicios">
+                    <li class="item-servicio">
+                        <i class="ri-time-line icono-servicio"></i>
+                        Entrega en 30 minutos
+                    </li>
+                    <li class="item-servicio">
+                        <i class="ri-price-tag-3-line icono-servicio"></i>
+                        Mejores ofertas y precios
+                    </li>
+                    <li class="item-servicio">
+                        <i class="ri-global-line icono-servicio"></i>
+                        Servicios en línea disponibles
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!--Diseño de sección de reservar silla-->
+    <section id="reserva" class="seccion-reserva">
+        <div class="contenedor">
+            <div class="reserva-contenido">
+                <div class="reserva-texto">
+                    <h2>Reserva tu Silla en nuestro restaurante</h2>
+                    <p>¡Reserva tu mesa en Pizzaroo y vive una experiencia culinaria excepcional! Disfruta de nuestras pizzas artesanales en un ambiente acogedor y con un servicio dedicado. ¡Te esperamos para que cada comida sea memorable!</p>
+                    <a href="reserva.html" class="boton-reserva">Reservar Ahora<i class="ri-arrow-right-double-line"></i></a>
+                </div>
+                <div class="reserva-video">
+                    <video width="560" height="315" autoplay muted loop>
+                        <source src="/video/pizzaroo-restaurante.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
+                
+            </div>
+        </div>
+    </section>        
+
+    <!--Diseño de sección de contacto-->
+    <section class="contacto">
+        <div class="encabezado">
+            <h2>Contáctanos Hoy</h2>
+            <p>¿Preguntas o sugerencias? Estamos aquí para ayudarte. Contáctanos y déjanos consentirte.</p>
+        </div> 
+    
+        <div class="contacto-contenedor">
+            <div class="contacto-info">
+                <h2>Rápido y Fácil, Nuestros Detalles</h2>
+                <p>Nuestros detalles de contacto están diseñados para brindarte una conexión rápida y sencilla. ¡Estamos aquí para ti!</p>
+                <div class="direccion">
+                    <i class="ri-map-pin-line"><span>Kra. 19 # 13-24</span></i>
+                    <i class="ri-phone-line"><span>57 + 3016048657</span></i> 
+                    <i class="ri-mail-line"><span>contacto@pizzaroo.com</span></i> 
+                </div>
+    
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253487.69396939827!2d-75.96792235401502!3d6.921031543877806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e45a98fc098e641%3A0xfd800ad310bd8bc2!2sSabanalarga%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1723335231189!5m2!1ses-419!2sco" 
+                    width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+    
+            <div class="contacto-form">
+                <form action="">
+                    <input type="text" placeholder="Nombre*">
+                    <input type="email" name="" id="" placeholder="Correo electrónico*">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje*"></textarea>
+                    <input type="button" value="Enviar" class="btn">
+                </form>
+            </div>
+        </div>
+    </section>    
+
+    <!--Diseño de sección de copyrigth-->
+    <section class="pie-de-pagina">
+        <div class="contenedor-pie">
+            <div class="logo-pie">
+                <img src="/imgs/Pizzaroo-logo.png">
+                <p>En la nueva era de la tecnología miramos hacia el futuro con certeza y orgullo para nuestra empresa y nuestros clientes.</p>
+                <div class="iconos-sociales-pie">
+                    <a href="#" class="icono-social"><i class="ri-facebook-circle-fill"></i></a>
+                    <a href="#" class="icono-social"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="icono-social"><i class="ri-twitter-x-fill"></i></a>
+                    <a href="#" class="icono-social"><i class="ri-whatsapp-line"></i></a>
+                </div>
+            </div>
+            <div class="enlaces-pie">
+                <h4>Páginas</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Pizzas</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#">Testimonios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="enlaces-pie">
+                <h4>Páginas Útiles</h4>
+                <ul>
+                    <li><a href="#">Ordenar en Línea</a></li>
+                    <li><a href="#">Catering y Eventos</a></li>
+                    <li><a href="#">Promociones y Ofertas</a></li>
+                    <li><a href="#">Ofertas de Trabajo</a></li>
+                    <li><a href="#">Guía de Ingredientes</a></li>
+                    <li><a href="#">Opiniones y Reseñas</a></li>
+                    <li><a href="#">Preguntas Frecuentes (FAQ)</a></li>
+                </ul>
+            </div>
+            <div class="instagram-pie">
+                <h4>Síguenos en Instagram</h4>
+                <div class="galeria-instagram">
+                    <img src="/imgs/footer-img-1.png">
+                    <img src="/imgs/footer-img-2.png">
+                    <img src="/imgs/footer-img-3.png">
+                    <img src="/imgs/footer-img-4.png">
+                    <img src="/imgs/footer-img-5.png">
+                    <img src="/imgs/footer-img-6.png">
+                </div>
+            </div>
+        </div>
+        <div class="fondo-pie">
+            <p>Copyright © 2024 Desarrollado por Owenwebdesigns. Reservados todos los derechos.</p>
+        </div>
+    </section>    
+
+    <!--scroll js link-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--Enlace hacia documento javascript-->
+    <script src="/js/script.js"></script>
+
+    <!-- script precarga js -->
+    <script>
+        var loader = document.getElementById("precarga");
+
+        window.addEventListener("load", function() {
+            setTimeout(function(){
+                loader.style.display = "none";
+            }, 1500);
+        });
+    </script>
+
+    <!-- JavaScript para los contadores -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const updateCounter = (id, target) => {
+                const element = document.getElementById(id);
+                let count = 0;
+                const increment = Math.ceil(target / 100);
+        
+                const interval = setInterval(() => {
+                    count += increment;
+                    if (count >= target) {
+                        count = target;
+                        clearInterval(interval);
+                    }
+                    element.textContent = count;
+                }, 50);
+            };
+        
+            // Valores objetivos para los contadores
+            updateCounter('pedidos', 900);
+            updateCounter('ordenados', 450);
+            updateCounter('clientes', 600);
+        });
+        </script>
+</body>
+</html>
