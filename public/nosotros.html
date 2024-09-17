@@ -33,17 +33,28 @@
 
         <ul class="barra-nav">
             <li><a href="pizzaroo.html">Inicio</a></li>
-            <li><a href="#">Menú</a></li>
+            <li><a href="menu.html">Menú</a></li>
             <li><a href="#">Nosotros</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="#testimonios">Testimonios</a></li>
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
 
-        <a href="#" id="carrito-icono">
-            <i class='bx bx-cart-add' ></i>
-            <span id="carrito-numero">0</span>
-        </a>
+        <div class="iconos-usuario">
+            <a href="#" id="carrito-icono">
+                <i class='bx bx-cart-add'></i>
+                <span id="carrito-numero">0</span>
+            </a>
+    
+            <div class="menu-sesion" id="menu-sesion">
+                <i class='bx bx-user' id="icono-usuario"></i>
+                <ul class="desplegable" id="menu-desplegable">
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                    <li><a href="registro.html">Registrarse</a></li>
+                    <li><a href="#">Administradores</a></li>
+                </ul>
+            </div>
+        </div>
 
         <div class="bx bx-menu" id="menu-icon"></div>
     </header>
@@ -67,6 +78,31 @@
             </div>
         </div>
     </section>
+
+    <!-- Botones flotantes -->
+    <div class="botones-flotantes">
+
+        <!-- Botón de Pedidos -->
+        <div class="boton-pedidos">
+            <i class="ri-pie-chart-line"></i>
+            <span class="cantidad-pedidos">1</span> pedidos en tiempo real 
+        </div>
+    
+        <!-- Botón de WhatsApp -->
+        <a href="https://wa.me/xxxxxxxxxx" class="boton boton-whatsapp">
+            <i class="ri-whatsapp-line"></i>
+        </a>
+    
+        <!-- Botón del Juego de Pizzas -->
+        <a href="videojuego.html" class="boton boton-juego-pizzas">
+            <i class="ri-gamepad-line"></i>
+        </a>
+    
+        <!-- Botón de Reservas de Sillas -->
+        <a href="reserva.html" class="boton boton-reserva-sillas">
+            <i class="ri-bookmark-3-line"></i>
+        </a>
+    </div>   
 
     <!--Diseño de sección de experiencia pizzaroo-->
     <section class="experiencia-pizzaroo">

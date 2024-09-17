@@ -532,6 +532,10 @@ header.sticky .barra-nav a:hover {
     font-weight: 600;
     color: var(--color-secundario);
     margin: 0 0 0.5rem;
+    cursor: pointer;
+}
+.ofertas-cj h3:hover {
+    color: var(--color-principal);
 }
 
 /* sección diseño de tienda*/
@@ -681,7 +685,7 @@ header.sticky .barra-nav a:hover {
 .cj-tienda .bxs-cart-add:hover {
     background: var(--color-secundario);
 }
-/* diseño responsivo nosotros*/
+/* diseño responsivo tienda*/
 @media (max-width: 768px) {
     .tienda {
         background: none;
@@ -1124,7 +1128,6 @@ header.sticky .barra-nav a:hover {
 .reserva-video video:hover {
     transform: scale(1.05); 
 }
-
 /* reserva tu silla responsivo */
 @media (max-width: 768px) {
     .reserva-contenido {

@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>articulos pizzaroo</title>
+    <title>carrito de compras pizzaroo</title>
 
      <!--Estilo css-->
-     <link rel="stylesheet" href="/css/articulos.css">
+     <link rel="stylesheet" href="/css/carrito.css">
 
      <!--Boxicons-->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -23,24 +23,25 @@
      <link rel="icon" href="/imgs/favicon.png">
 </head>
 <body>
+
     <!-- precarga -->
     <div id="precarga"></div>
 
     <!--Diseño barra de navegación-->
     <header>
-        <a href="#" class="logo"><img src="/imgs/Pizzaroo.svg">Pizzaroo</a>
+        <a href="pizzaroo.html" class="logo"><img src="/imgs/Pizzaroo.svg">Pizzaroo</a>
 
         <ul class="barra-nav">
-            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="pizzaroo.html">Inicio</a></li>
             <li><a href="menu.html">Menú</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="menu.html">Nosotros</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="#testimonios">Testimonios</a></li>
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
 
         <div class="iconos-usuario">
-            <a href="carrito.html" id="carrito-icono">
+            <a href="#" id="carrito-icono">
                 <i class='bx bx-cart-add'></i>
                 <span id="carrito-numero">0</span>
             </a>
@@ -58,48 +59,106 @@
         <div class="bx bx-menu" id="menu-icon"></div>
     </header>
 
-    <!--Diseño de post unico-->
-    <section class="post-unico">
-        <div class="contenedor-post">
-            <h1 class="titulo-principal">Los 3 Errores Comunes al Hacer Pizza y Cómo Evitarlos ⚠️</h1>
-    
-            <div class="imagen-post">
-                <img src="/imgs/articulo-3.png">
+    <!--Diseño de sección de carrito de compras -->
+    <section class="fondo-carrito">
+        <div class="carrito-compras">
+            <div class="contenido-carrito">
+                <h2>CARRITO DE COMPRAS</h2>
+                <div class="items-carrito">
+                    <div class="item" data-id="1">
+                        <img src="/imgs/Pizza-de-Pepperoni.png">
+                        <div class="detalles-item">
+                            <h4>Pizza de Pepperoni</h4>
+                            <p class="precio">COP 28,400</p>
+                        </div>
+                        <div class="cantidad">
+                            <button class="menos">-</button>
+                            <input type="text" value="1" readonly>
+                            <button class="mas">+</button>
+                        </div>
+                        <button class="eliminar"><i class="ri-close-line"></i></button>
+                    </div>
+        
+                    <div class="item" data-id="2">
+                        <img src="/imgs/pizza2.jpg">
+                        <div class="detalles-item">
+                            <h4>Pizza de Pollo BBQ</h4>
+                            <p class="precio">COP 29,800</p>
+                        </div>
+                        <div class="cantidad">
+                            <button class="menos">-</button>
+                            <input type="text" value="1" readonly>
+                            <button class="mas">+</button>
+                        </div>
+                        <button class="eliminar"><i class="ri-close-line"></i></button>
+                    </div>
+        
+                    <div class="item" data-id="3">
+                        <img src="/imgs/pizza3.jpg">
+                        <div class="detalles-item">
+                            <h4>Pizza de Prosciutto</h4>
+                            <p class="precio">COP 36,500</p>
+                        </div>
+                        <div class="cantidad">
+                            <button class="menos">-</button>
+                            <input type="text" value="1" readonly>
+                            <button class="mas">+</button>
+                        </div>
+                        <button class="eliminar"><i class="ri-close-line"></i></button>
+                    </div>
+        
+                    <div class="item" data-id="4">
+                        <img src="/imgs/pizza4.jpg">
+                        <div class="detalles-item">
+                            <h4>Pizza Campestre</h4>
+                            <p class="precio">COP 29,200</p>
+                        </div>
+                        <div class="cantidad">
+                            <button class="menos">-</button>
+                            <input type="text" value="1" readonly>
+                            <button class="mas">+</button>
+                        </div>
+                        <button class="eliminar"><i class="ri-close-line"></i></button>
+                    </div>
+                </div>
             </div>
-    
-            <div class="contenido-post">
-                <h2>¿Por qué tu pizza casera no queda perfecta?</h2>
-                <p>Hacer pizza en casa puede ser una experiencia deliciosa, pero también frustrante si no obtienes los resultados que esperabas. A menudo, pequeños errores en el proceso pueden afectar el sabor y la textura de tu pizza. A continuación, te explicamos los tres errores más comunes y cómo evitarlos para que tu pizza sea un éxito.</p>
-    
-                <h3>1. No dejar reposar la masa lo suficiente:</h3>
-                <p>Uno de los errores más comunes al hacer pizza es no darle a la masa el tiempo adecuado para reposar. La fermentación es crucial para desarrollar una buena textura y sabor. Si no permites que la masa repose lo suficiente, terminarás con una base dura y sin aire. Asegúrate de dejarla fermentar durante al menos 24 horas en el refrigerador para obtener mejores resultados.</p>
-    
-                <h3>2. Sobrecargar la pizza con ingredientes:</h3>
-                <p>Es tentador añadir muchos ingredientes a tu pizza, pero sobrecargarla puede hacer que se cocine de manera desigual, dejando una base húmeda y mal cocida. La clave es la moderación: elige pocos ingredientes de alta calidad y distribúyelos de manera uniforme para asegurar que se cocinen correctamente.</p>
-    
-                <h3>3. Cocinar a una temperatura inadecuada:</h3>
-                <p>Otro error común es no cocinar la pizza a la temperatura adecuada. Si el horno no está lo suficientemente caliente, la masa no se cocinará bien y los ingredientes no se fundirán como deberían. Precalienta tu horno a la temperatura más alta posible (generalmente entre 250°C y 280°C) y utiliza una piedra para pizza o una bandeja precalentada para lograr una base crujiente y un horneado uniforme.</p>
+        
+            <div class="resumen-compra">
+                <h3>Su Total</h3>
+                <p>Subtotal: <span id="subtotal">COP 123,900</span></p>
+                <button class="confirmar">Confirmar Pedido</button>
+        
+                <h3>Código Promocional</h3>
+                <input type="text" placeholder="Ingrese código">
+                <button class="aplicar">Aplicar</button>
             </div>
-    
-            <div class="imagen-post">
-                <img src="/imgs/articulo-7.png">
-            </div>
-    
-            <div class="contenido-post">
-                <h2>Cómo evitar estos errores y mejorar tu pizza</h2>
-                <p>Evitar estos errores comunes te ayudará a mejorar significativamente la calidad de tu pizza casera. Aquí te dejamos algunos consejos adicionales para asegurarte de que cada pizza que prepares sea perfecta.</p>
-    
-                <h3>1. Planificación y Paciencia:</h3>
-                <p>Planifica con anticipación y da tiempo a la masa para que fermente adecuadamente. Una buena pizza casera requiere tiempo, así que sé paciente y no apresures el proceso.</p>
-    
-                <h3>2. Equilibrio de Ingredientes:</h3>
-                <p>Elige con cuidado tus ingredientes y mantén el equilibrio. Menos es más cuando se trata de toppings, así que enfócate en la calidad en lugar de la cantidad.</p>
-    
-                <h3>3. Precalentar Correctamente:</h3>
-                <p>Siempre precalienta tu horno y, si es posible, utiliza una piedra para pizza o una bandeja de acero para asegurar una cocción uniforme y una base crujiente.</p>
-            </div>
+        </div>                       
+    </section>
+
+    <!-- Botones flotantes -->
+    <div class="botones-flotantes">
+
+        <!-- Botón de Pedidos -->
+        <div class="boton-pedidos">
+            <i class="ri-pie-chart-line"></i>
+            <span class="cantidad-pedidos">1</span> pedidos en tiempo real 
         </div>
-    </section>        
+    
+        <!-- Botón de WhatsApp -->
+        <a href="https://wa.me/xxxxxxxxxx" class="boton boton-whatsapp">
+            <i class="ri-whatsapp-line"></i>
+        </a>
+    
+        <!-- Botón del Juego de Pizzas -->
+        <a href="videojuego.html" class="boton boton-juego-pizzas">
+            <i class="ri-gamepad-line"></i>
+        </a>
+    
+        <!-- Botón de Reservas de Sillas -->
+        <a href="reserva.html" class="boton boton-reserva-sillas">
+            <i class="ri-bookmark-3-line"></i>
+        </a>
+    </div>   
     
     <!--Diseño de sección de copyrigth-->
     <section class="pie-de-pagina">
@@ -152,7 +211,7 @@
         <div class="fondo-pie">
             <p>Copyright © 2024 Desarrollado por Owenwebdesigns. Reservados todos los derechos.</p>
         </div>
-    </section>   
+    </section>    
 
     <!--scroll js link-->
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -171,3 +230,4 @@
         });
     </script>
 </body>
+</html>

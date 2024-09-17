@@ -127,7 +127,7 @@ header.sticky .barra-nav a {
 header.sticky .barra-nav a:hover {
     background: var(--color-secundario);
 }
-/* portada responsiva*/
+/* menu de navegacion responsivo*/
 @media (max-width: 1100px) {
     body {
         background: var(--color-fondo);
@@ -175,94 +175,6 @@ header.sticky .barra-nav a:hover {
         color: #fff;
     }
 }
-
-/* sección diseño de reserva*/
-.reserva-pizzaroo {
-    padding: 50px 20px;
-    background: url(/imgs/fondo-reserva.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-}
-.contenedor-reserva {
-    max-width: 700px;
-    margin: 0 auto;
-    margin-top: 4.5rem;
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-.contenedor-reserva h2 {
-    font-family: 'Righteous', sans-serif;
-    font-size: 3.6rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: var(--color-principal);
-} 
-.contenedor-reserva p {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 19px;
-    margin-bottom: 40px;
-    color: var(--color-secundario);
-}
-.formulario-reserva {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-} 
-.campo {
-    flex: 1;
-    min-width: 48%;
-    margin-bottom: 20px;
-}
-.campo label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: var(--color-principal);
-}
-.campo input,
-.campo select {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid var(--color-principal);
-    border-radius: 5px;
-    font-size: 16px;
-    color: #333;
-    box-shadow: 0 4px 4px 2px rgb(14 55 54 / 15%);
-}
-.boton-reserva {
-    background: linear-gradient(to left top, #ff5714, #ff8500, #ffb000, #f7d800, #e4ff1a);
-    width: 100%;
-    color: #fff;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 50px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-.boton-reserva:hover {
-    background: linear-gradient(to right bottom, #ff5714, #ff8500, #ffb000, #f7d800, #e4ff1a);
-}
-/* diseño resposivo */
-@media (max-width: 768px) {
-    .contenedor-reserva h2 {
-      font-size: 2.5em;
-    }
-    .contenedor-reserva p {
-      font-size: 19px;
-    }
-    .formulario-reserva {
-      flex-direction: column;
-    }
-    .campo {
-      min-width: 100%;
-    }
-}  
 
 /* Estilo para el icono de usuario y el menú desplegable */
 .menu-sesion {
@@ -317,81 +229,352 @@ header.sticky .barra-nav a:hover {
     }
 }
 
-/* Estilos del botón flotante WhatsApp */
+/* Estilo para los botones flotantes */
 .botones-flotantes {
     position: fixed;
-    bottom: 33px; 
-    right: 33px;  
+    bottom: 20px;
+    right: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 11px;
+    flex-direction: column-reverse; /* Muestra los botones en orden inverso */
+    gap: 10px;
     z-index: 1000;
 }
-.boton-flotante-whatsapp,
-.boton-flotante-facebook,
-.boton-flotante-instagram,
-.boton-flotante-twitter {
-    background: #25D366; 
-    color: #fff;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+.boton {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background: var(--color-principal);
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    color: #fff; 
+    font-size: 29px;
 }
-.boton-flotante-facebook {
-    background: #3b5998;
+.boton:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
-.boton-flotante-instagram {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); 
-}
-.boton-flotante-twitter {
-    background: #1DA1F2; 
-}
-.boton-flotante-whatsapp a,
-.boton-flotante-facebook a,
-.boton-flotante-instagram a,
-.boton-flotante-twitter a {
+.boton-pedidos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-principal);
     color: #fff;
-    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 17px;
+    transition: transform 0.3s ease;
+} 
+.boton-pedidos i {
+    font-size: 20px;
+    margin-right: 8px;
 }
-.boton-flotante-whatsapp i,
-.boton-flotante-facebook i,
-.boton-flotante-instagram i,
-.boton-flotante-twitter i {
-    font-size: 23px;
-}
-.boton-flotante-whatsapp:hover,
-.boton-flotante-facebook:hover,
-.boton-flotante-instagram:hover,
-.boton-flotante-twitter:hover {
+.boton-pedidos:hover {
     transform: scale(1.05);
 }
-/* responsividad de botones flotantes */
+.cantidad-pedidos {
+    font-weight: bold;
+    margin-right: 5px;
+}
+.boton-whatsapp {
+    background: #25D366;
+    margin-left: 170px;
+}
+.boton-juego-pizzas {
+    background: #f7d800; 
+    margin-left: 170px;
+}
+.boton-reserva-sillas {
+    background: #392E2D; 
+    margin-left: 170px;
+}
+/* Responsivo boton flotante */
 @media (max-width: 768px) {
     .botones-flotantes {
-        right: 15px;
-        bottom: 20px;
-        gap: 10px;
+      bottom: 15px;
+      right: 15px;
+      gap: 8px;
     }
-    .boton-flotante-whatsapp,
-    .boton-flotante-facebook,
-    .boton-flotante-instagram,
-    .boton-flotante-twitter {
-        width: 45px;
-        height: 45px;
+    .boton {
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
     }
-    .boton-flotante-whatsapp i,
-    .boton-flotante-facebook i,
-    .boton-flotante-instagram i,
-    .boton-flotante-twitter i {
-        font-size: 20px;
+    .boton-whatsapp, 
+    .boton-juego-pizzas,
+    .boton-reserva-sillas {
+        margin-left: 200px;
     }
+    .boton-pedidos {
+        display: none;
+    }
+}
+
+/* Estilos del carrito de compras*/
+.fondo-carrito {
+    background: url(/imgs/fondo-tienda-completa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.carrito-compras {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 39px;
+    justify-content: space-between;
+}
+.contenido-carrito {
+    flex-grow: 2;
+}
+h2 {
+    font-family: 'Righteous', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: var(--color-principal);
+    margin-bottom: 23px;
+}
+.items-carrito .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #f2d2b4;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+.items-carrito .item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+}
+.detalles-item h4 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    font-size: 19px;
+    color: var(--color-secundario);
+    margin-bottom: 5px;
+}
+.cantidad {
+    display: flex;
+    align-items: center;
+}
+.cantidad button {
+    padding: 5px 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+.cantidad input {
+    width: 30px;
+    text-align: center;
+    margin: 0 5px;
+    border: none;
+    background: #fff;
+}
+.eliminar i {
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+}
+.resumen-compra {
+    background: #f2d2b4;
+    padding: 20px;
+    border-radius: 7px;
+    width: 300px;
+}
+.resumen-compra h3 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+span, .p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+}
+.confirmar, .aplicar {
+    display: block;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    width: 100%;
+    padding: 11px;
+    border: none;
+    background: var(--color-principal);
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.confirmar:hover {
+    letter-spacing: 2px;
+    background: var(--color-secundario);
+    color: var(--color-fondo);
+    font-weight: 700;  
+}
+.aplicar:hover {
+    letter-spacing: 2px;
+    background: var(--color-secundario);
+    color: var(--color-fondo);
+    font-weight: 700;  
+}
+/* Estilos responsivo del carrito  */
+@media (max-width: 768px) {
+    .carrito-compras {
+        flex-direction: column;
+    }
+    .contenido-carrito {
+        width: 100%;
+    }
+    .resumen-compra {
+        width: 100%;
+    }
+    .items-carrito .item img {
+        width: 50px;
+        height: 50px;
+    }
+    /* Aumentar el espacio arriba y abajo */
+    .items-carrito .item {
+        position: relative;
+        padding: 21px 11px; 
+        margin-bottom: 15px; 
+    }
+    .items-carrito .item .eliminar {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}
+@media (max-width: 480px) {
+    h2 {
+        font-size: 33px;
+    }
+    .items-carrito .item {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        padding: 21px 11px; 
+        margin-bottom: 15px; 
+    }
+    .cantidad input {
+        width: 25px;
+    }
+    .resumen-compra {
+        width: 100%;
+        padding: 15px;
+    }
+    .items-carrito .item .eliminar {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .resumen-compra {
+        padding: 21px 11px;
+    }
+}
+
+/* sección diseño de copyright*/
+.contacto {
+    align-items: center;
+    background: url(/imgs/fondo-3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+.contacto-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem;
+}
+.contacto-info {
+    flex: 1 1 20rem;
+}
+.contacto-form {
+    flex: 1 1 20rem;
+    display: flex;
+    justify-content: center; 
+}
+.contacto-info h2 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.7rem;
+    color: var(--color-principal);
+}
+.contacto-info p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    margin: 0.5rem 0 1rem;
+}
+.direccion {
+    display: flex;
+    flex-direction: column;
+}
+.direccion i {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 21px;
+}
+.direccion span {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+.red-social {
+    margin-top: 1rem;
+}
+.red-social a {
+    font-size: 25px;
+    color: var(--color-principal);
+    margin-right: 1rem;
+}
+.red-social a:hover {
+    color: var(--color-secundario);
+}
+.contacto-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+form input, 
+textarea {
+    width: 100%;
+    padding: 17px;
+    border-radius: 0.5rem;
+    outline:  none;
+    margin-bottom: 1rem;
+    border: 2px solid var(--color-principal);
+    box-shadow: 0 4px 4px 2px rgb(14 55 54 / 15%);
+}
+form input::placeholder, 
+textarea::placeholder {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    color: var(--color-principal);
+}
+form textarea {
+    resize: none;
+    height: 150px;
+}
+form .btn {
+    max-width: 100px;
+    background: linear-gradient(to left top, #ff5714, #ff8500, #ffb000, #f7d800, #e4ff1a);
+    color: #fff;
+    font-size: 17px;
+    text-transform: capitalize;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
 }
 
 /* sección diseño de copyright*/
@@ -529,5 +712,3 @@ header.sticky .barra-nav a:hover {
         gap: 5px;
     }
 }
-
-

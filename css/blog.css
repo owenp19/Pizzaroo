@@ -106,6 +106,10 @@ header {
     top: -13px;
     right: -13px;
 }
+.iconos-usuario {
+    display: flex;
+    align-items: center;
+}
 header.sticky {
     background: #f7d800;
     box-shadow:  0 0 4px rgb(14 55 54 / 15%);
@@ -119,7 +123,7 @@ header.sticky .barra-nav a {
 header.sticky .barra-nav a:hover {
     background: var(--color-secundario);
 }
-/* portada responsiva*/
+/* menu de navegacion responsivo*/
 @media (max-width: 1100px) {
     body {
         background: var(--color-fondo);
@@ -165,6 +169,59 @@ header.sticky .barra-nav a:hover {
         padding: 1.5rem;
         display: block;
         color: #fff;
+    }
+}
+
+/* Estilo para el icono de usuario y el menú desplegable */
+.menu-sesion {
+    position: relative;
+    margin-left: 20px;
+}
+.menu-sesion i {
+    font-size: 25px;
+    color: var(--color-secundario);
+    cursor: pointer;
+}
+.desplegable i {
+    font-size: 19px;
+    margin-right: 5px;
+    color: var(--color-secundario);
+}
+.menu-sesion .desplegable {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1000;
+}
+.menu-sesion .desplegable li {
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+}
+.menu-sesion .desplegable li:last-child {
+    border-bottom: none;
+}
+.menu-sesion .desplegable a {
+    display: block;
+    padding: 10px 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    color: var(--color-secundario);
+    text-decoration: none;
+    transition: all ease 0.3s;
+}
+.menu-sesion .desplegable a:hover {
+    background: var(--color-principal);
+    color: #fff;
+}
+/* responsivo menu desplegable */
+@media (max-width: 768px) {
+    .menu-sesion {
+        margin-left: 10px;
     }
 }
 
@@ -270,6 +327,83 @@ header.sticky .barra-nav a:hover {
     }
     .boton-leer-articulo i {
         font-size: 14px;
+    }
+}
+
+/* Estilos del botón flotante WhatsApp */
+.botones-flotantes {
+    position: fixed;
+    bottom: 33px; 
+    right: 11px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 11px;
+    z-index: 1000;
+}
+.boton-flotante-whatsapp,
+.boton-flotante-facebook,
+.boton-flotante-instagram,
+.boton-flotante-twitter {
+    background: #25D366; 
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.boton-flotante-facebook {
+    background: #3b5998;
+}
+.boton-flotante-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); 
+}
+.boton-flotante-twitter {
+    background: #1DA1F2; 
+}
+.boton-flotante-whatsapp a,
+.boton-flotante-facebook a,
+.boton-flotante-instagram a,
+.boton-flotante-twitter a {
+    color: #fff;
+    text-decoration: none;
+}
+.boton-flotante-whatsapp i,
+.boton-flotante-facebook i,
+.boton-flotante-instagram i,
+.boton-flotante-twitter i {
+    font-size: 23px;
+}
+.boton-flotante-whatsapp:hover,
+.boton-flotante-facebook:hover,
+.boton-flotante-instagram:hover,
+.boton-flotante-twitter:hover {
+    transform: scale(1.05);
+}
+/* responsividad de botones flotantes */
+@media (max-width: 768px) {
+    .botones-flotantes {
+        right: 15px;
+        bottom: 20px;
+        gap: 10px;
+    }
+    .boton-flotante-whatsapp,
+    .boton-flotante-facebook,
+    .boton-flotante-instagram,
+    .boton-flotante-twitter {
+        width: 45px;
+        height: 45px;
+    }
+    .boton-flotante-whatsapp i,
+    .boton-flotante-facebook i,
+    .boton-flotante-instagram i,
+    .boton-flotante-twitter i {
+        font-size: 20px;
     }
 }
 

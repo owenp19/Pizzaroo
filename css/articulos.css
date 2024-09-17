@@ -95,6 +95,10 @@ header {
     text-decoration: none;
     position: relative;
 }
+.iconos-usuario {
+    display: flex;
+    align-items: center;
+}
 #carrito-icono i {
     font-size: 25px; 
     margin-right: 5px;
@@ -123,54 +127,60 @@ header.sticky .barra-nav a {
 header.sticky .barra-nav a:hover {
     background: var(--color-secundario);
 }
-/* portada responsiva*/
-@media (max-width: 1100px) {
-    body {
-        background: var(--color-fondo);
-    }
-    .inicio-texto h1 {
-        font-size: 3rem;
+
+/* Estilo para el icono de usuario y el menú desplegable */
+.menu-sesion {
+    position: relative;
+    margin-left: 20px;
+}
+.menu-sesion i {
+    font-size: 25px;
+    color: var(--color-secundario);
+    cursor: pointer;
+}
+.desplegable i {
+    font-size: 19px;
+    margin-right: 5px;
+    color: var(--color-secundario);
+}
+.menu-sesion .desplegable {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1000;
+}
+.menu-sesion .desplegable li {
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+}
+.menu-sesion .desplegable li:last-child {
+    border-bottom: none;
+}
+.menu-sesion .desplegable a {
+    display: block;
+    padding: 10px 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    color: var(--color-secundario);
+    text-decoration: none;
+    transition: all ease 0.3s;
+}
+.menu-sesion .desplegable a:hover {
+    background: var(--color-principal);
+    color: #fff;
+}
+/* responsivo menu desplegable */
+@media (max-width: 768px) {
+    .menu-sesion {
+        margin-left: 10px;
     }
 }
-@media (max-width: 991px) {
-    header {
-        padding: 18px 4%;
-    }
-    section {
-        padding: 50px 4%;
-    }
-}
-@media (max-width: 480px) {
-    header {
-        padding: 11px 4%;
-    }
-    #menu-icon{
-        display: initial;
-    }
-    header.sticky #menu-icon {
-        color: #fff;
-    }
-    header .barra-nav {
-        position: absolute;
-        top: -500px;
-        left: 0;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        background: #f7d800;
-        box-shadow: 0 4px 4px rgb(14 55 54 / 15%);
-        transition: 0.2s;
-        text-align: right;
-    }
-    .barra-nav.sticky {
-        top: 100%;
-    }
-    .barra-nav a {
-        padding: 1.5rem;
-        display: block;
-        color: #fff;
-    }
-}
+
 
 /* sección diseño de articulo pizzero completo*/
 .post-unico {

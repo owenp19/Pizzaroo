@@ -104,6 +104,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(incrementarContador, 10000); // 10000 ms = 10 segundos
 });
 
+// script de menu desplegable 
 document.getElementById("icono-usuario").addEventListener("click", function() {
     const menu = document.getElementById("menu-desplegable");
     if (menu.style.display === "block") {
@@ -122,6 +123,51 @@ window.addEventListener("click", function(event) {
         }
     }
 });
+
+// Seleccionar todos los botones de 'mas', 'menos', y 'eliminar'
+const itemsCarrito = document.querySelectorAll('.item');
+const subtotalDisplay = document.getElementById('subtotal');
+
+itemsCarrito.forEach(item => {
+    const btnMas = item.querySelector('.mas');
+    const btnMenos = item.querySelector('.menos');
+    const btnEliminar = item.querySelector('.eliminar');
+    const cantidadInput = item.querySelector('.cantidad input');
+    const precioItem = parseFloat(item.querySelector('.precio').textContent.replace('COP ', '').replace(',', ''));
+
+    btnMas.addEventListener('click', () => {
+        let cantidadActual = parseInt(cantidadInput.value);
+        cantidadActual++;
+        cantidadInput.value = cantidadActual;
+        actualizarSubtotal();
+    });
+
+    btnMenos.addEventListener('click', () => {
+        let cantidadActual = parseInt(cantidadInput.value);
+        if (cantidadActual > 1) {
+            cantidadActual--;
+            cantidadInput.value = cantidadActual;
+            actualizarSubtotal();
+        }
+    });
+
+    btnEliminar.addEventListener('click', () => {
+        item.remove();
+        actualizarSubtotal();
+    });
+});
+
+// Función para actualizar el subtotal
+function actualizarSubtotal() {
+    let subtotal = 0;
+    document.querySelectorAll('.item').forEach(item => {
+        const cantidad = parseInt(item.querySelector('.cantidad input').value);
+        const precio = parseFloat(item.querySelector('.precio').textContent.replace('COP ', '').replace(',', ''));
+        subtotal += cantidad * precio;
+    });
+    subtotalDisplay.textContent = `COP ${subtotal.toLocaleString()}`;
+}
+
 
 
 

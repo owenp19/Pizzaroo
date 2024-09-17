@@ -1,0 +1,108 @@
+/* codigo raiz*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Nunito Sans', sans-serif;
+}
+:root {
+    --color-principal: #FF5714;
+    --color-secundario: #392E2D;
+    --color-fondo: #EAE5D9; 
+}
+
+body {
+    background: var(--color-fondo);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Precarga */
+#precarga {
+    background: #202030a6 url(/imgs/precarga.gif) no-repeat center center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+/* Formualrio de registro */
+.contenedor-registro {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+.registro-formulario {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.logo {
+    margin-bottom: 20px;
+}
+.gif-registro {
+    width: 133px; 
+    height: auto;
+    margin-bottom: 20px;
+}
+.campo {
+    margin-bottom: 20px;
+}
+.campo label {
+    display: block;
+    font-size: 19px;
+    font-family: 'Righteous', sans-serif;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--color-secundario);
+}
+.campo input, .campo select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.boton-registro {
+    margin-top: 20px;
+}
+.boton-registro button {
+    width: 100%;
+    padding: 10px;
+    background: #f7d800;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 17px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+.boton-registro button:hover {
+    background: var(--color-secundario);
+}
+/* responsivo */
+@media (max-width: 768px) {
+    .contenedor-registro {
+        padding: 10px;
+    }
+}
+@media (max-width: 480px) {
+    .contenedor-registro {
+        max-width: 300px;
+    }
+}
+
