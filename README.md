@@ -1,6 +1,6 @@
 ![Pizzaroo](/imgs/Pizzaroo-logo.png)
 
-# Pizzaroo - Sitio Web de Pedidos de Pizza
+# Pizzaroo - Sitio Web de Pedidos de Pizzas
 
 ![Portada Pizzaroo](/imgs/portada.png)
 
@@ -37,4 +37,4 @@ Las contribuciones son bienvenidas. Para contribuir:
 2. **Crear una Rama de Funcionalidad:**
 
    ```bash
-   git checkout -b feature/nueva-funcionalidad
+   git checkout (https://github.com/owenp19/Pizzaroo.git)
